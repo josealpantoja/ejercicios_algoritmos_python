@@ -3,7 +3,7 @@ print('')
 print('*' * 20)
 print('')
 
-print('Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes de sus dos catetos. Desarrolle el algoritmo correspondiente.')
+print('🚨1️⃣  Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes de sus dos catetos. Desarrolle el algoritmo correspondiente.')
 print('')
 
 catA = input('Escoje el cateto A de un triángulo 👉 ')
@@ -56,3 +56,12 @@ print('La Hipotenusa de un trianculo rectangulo cuyo Cateto A es', catA, 'y cate
 print('')
 print('*' * 20)
 print('')
+print('')
+
+print('🚨2️⃣  Desarrollar un algoritmo que calcule el área de un cuadrado.')
+print('')
+
+area = hipotenusa * hipotenusa
+area_sting = str(area) + ' unidades^2'
+
+print('El área del cuadrado de la hipotenusa:', hipotenusa, 'es 👉', area_sting)
