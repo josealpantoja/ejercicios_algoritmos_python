@@ -3,7 +3,7 @@ Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las vari
 
 '''
 
-print('Escribe 3 números diferentes a continuación...')
+print('Escribe 4 números diferentes a continuación...')
 print('Recuerda que ninguún valor debe ser igual')
 
 a = float(input('Escribe el primer número 👉 '))
@@ -11,6 +11,67 @@ b = float(input('Escribe el segundo número 👉 '))
 c = float(input('Escribe el tercer número 👉 '))
 d = float(input('Escribe el tercer número 👉 '))
 
+def comparacion_max(n1,n2,n3,n4):
+    if n1 > n2 and n1 > n3 and n1 > n4:
+        vmed1, vmed2, vmin = comparacion_med1(n2, n3, n4)
+        return n1, vmed1, vmed2, vmin 
+    elif n2 > n1 and n2 > n3 and n2 > n4:
+        vmed1, vmed2, vmin  = comparacion_med1(n1, n3, n4)
+        return n2, vmed1, vmed2, vmin 
+    elif n3 > n1 and n3 > n2 and n3 > n4:
+        vmed1, vmed2, vmin  = comparacion_med1(n2, n1, n4)
+        return n3, vmed1, vmed2, vmin 
+    else:
+        vmed1, vmed2, vmin  = comparacion_med1(n2, n3, n1)
+        return n4, vmed1, vmed2, vmin 
+    
+def comparacion_med1(n1, n2, n3):
+    if n1 > n2 and n1 > n3:
+        vmed2, vmin = comparacion_min(n2, n3)
+        return n1, vmed2, vmin
+    elif n2 > n1 and n2 > n3:
+        vmed2, vmin = comparacion_min(n1, n3)
+        return n2, vmed2, vmin
+    else:
+        vmed2, vmin = comparacion_min(n1, n2)
+        return n3, vmed2, vmin
+
+def comparacion_min(n1, n2):
+    if n1 > n2:
+        return n1, n2
+    else:
+        return n2, n1
+
+if a == b or a == c or a == d or b == c or b == d or c == d:
+    print('uno o dos valores son iguales, por favor intoducir valores distintos')
+    
+else:
+    max, med1, med2, min = comparacion_max(a, b, c, d)
+    print(max, med1, med2, min)
+
+
+
+'''
+
+#Imprimir resultado final    
+    print('')
+    print('*' * 20)
+    print('')
+    print('El número más grande es', max, ' de la variable', var_max)
+    print('')
+    print('El número mediano es', med_1, ' de la variable', var_med_1)
+    print('')
+    print('El número mediano es', med_2, ' de la variable', var_med_2)
+    print('')
+    print('El número más chico es', min, ' de la variable', var_min)
+    print('')
+    print('*' * 20)
+    print('')
+'''
+
+'''
+
+Versión 2
 
 if a == b or a == c or a == d or b == c or b == d or c == d:
     print('uno o dos valores son iguales, por favor intoducir valores distintos')
@@ -189,6 +250,8 @@ else:
                 min = b
                 var_min = 'b'
 
+
+
 #Imprimir resultado final    
     print('')
     print('*' * 20)
@@ -204,7 +267,7 @@ else:
     print('*' * 20)
     print('')
 
-
+'''
 
 '''
 VERSION ANTERIOR SOLO PARA ESTUDIO
