@@ -87,8 +87,7 @@ print('*' * 20)
 print('')
 
 sum = 0
-
-for i in range(1, 301):
+for i in range(1, 31):
     if (i / 2) - float(i // 2) == 0.5:
         print(i)
         sum = sum + i
@@ -100,3 +99,21 @@ print('')
 print('*' * i)
 print('')
 
+#EJERCICIO 4
+
+
+print('')
+print('EJERCICIO 4-B')
+print('')
+print('🚨 Usando list comprehension')
+print('')
+print('*' * 20)
+print('')
+
+suma = 0
+impares = [i for i in range(1, 31) if i % 2 != 0]
+for n in impares:
+    suma = suma + n
+
+print('')
+print(impares, 'La sumatoria de los números inpares del 1 al', i, 'es 👉', suma)
