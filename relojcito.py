@@ -41,6 +41,7 @@ def dia_ciclo(dia):
             print(f'{separador} {dia} dias, la hora es: {hora_formateada} {separador}')
     return dia + 1
 
+'''
 def run(dia):
     dia = dia_ciclo(dia)
     if dia < 993:
@@ -50,10 +51,19 @@ def run(dia):
         time.sleep(4) #es para que espere 1 segundos para supervisar el local time
         run(dia = 0) # reseteamos la variable dia, para que el reloj sea infinito PERO NO FUNCIONO ¿me ayudan?
 
+'''
 def imprime_hora_local():
     hora_local = time.localtime()  # Obtiene la estructura de tiempo para la hora local
     hora_formateada = time.strftime("%Y-%m-%d %H:%M:%S", hora_local) # Formatea la hora como una cadena
     return hora_formateada
 
-print("Hora local actual:", imprime_hora_local())
-run(dia = 0)
+
+
+def run(dia):
+    while True:
+        dia = dia_ciclo(dia)
+
+
+if __name__ == '__main__':
+    print("Hora local actual:", imprime_hora_local())
+    run(dia = 0)
